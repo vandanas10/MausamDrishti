@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+#layerSelect {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  z-index: 1000;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+#mapContainer {
+  height: 100%; /* Full viewport height */
+  width: 100%;  /* Full viewport width */
+}
+
+.back-button {
+
+  margin-top: 30px;
+}
+
+.back-button button {
+  position: absolute;
+  bottom: 2vw;
+  left: 2vw;
+  padding: 12px 25px;
+  font-size: 1em;
+  z-index: 1000;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button button:hover {
+  background-color: #004d40;
+}

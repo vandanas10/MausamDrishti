@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav-bar">
+            <div class="nav-icon">
+                <h2><a href="">Mausam <br> Drishti</br></a></h2>
+                 <!-- <h2><a href="">MD</a></h2> -->
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="maps.html">Maps</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <div class="label-search-bar">
+                <label for="search-input">Search by Places</label>
+            </div>
+            <div class="search-bar-btn">
+                <input type="search" class="input-search search-font" id="search-input" name="q" />
+                <button class="btn-search search-font" id="search-btn">Search</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdrbcmaVg00iq45x6iIx5EZ4k-G9tQPY0&libraries=places"></script>
+
+    <script src="js/search.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>

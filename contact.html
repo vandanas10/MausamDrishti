@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='index.html';">Back to Home</button>
+    <div class="container">
+        <div>
+            <h1>Vandana</h1>
+            <p>Hello! I'm the developer of this WebApp MausamDrishti, I have made this App using HTML, CSS, and JavaScript functionality at the backend.
+                The real-time data of weather is provided by OpenWeatherAPI and the data of maps is provided by Google. I'll be delighted to know your feedback!! Thanks.
+            </p>
+            <div class="section-title">Email</div>
+            <ul class="email-list">
+                <li>
+                    <strong>kvandanas1062@gmail.com</strong>
+                </li>
+            </ul>
+            <div class="section-title">Socials</div>
+            <ul class="socials">
+                <li>
+                    <a href="javascript:void(0)">FB</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/vandana-singh-862752242/">LinkedIn</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">IG</a>
+                </li>
+            </ul>
+        </div>
+        <form id="contact-form">
+            <input type="text" id="name-input" placeholder="Name" class="input" required />
+            <input type="email" id="email-input" placeholder="Email" class="input" required />
+            <input type="text" id="subject-input" placeholder="Subject" class="input" required />
+            <textarea id="message-input" rows="6" placeholder="Message" class="input" required></textarea>
+            <button type="button" id="submit-button" class="button">Send</button>
+        </form>
+    </div>
+    <div id="results">
+        <h2>Submitted Messages</h2>
+        <!-- Dynamic content will be appended here -->
+    </div>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

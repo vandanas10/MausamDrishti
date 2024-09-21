@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.back-button {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+
+/* css/weather.css */
+
+/* Existing styles... */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-image 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.676); /* Semi-transparent background */
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button button {
+    padding: 12px 25px;
+    font-size: 1em;
+    background-color: rgba(0, 121, 107, 1);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button button:hover {
+    background-color: #004d40;
+}
+
+/* Weather Condition Backgrounds */
+.clear {
+    background-image: url('../img/weather/clear.jpg');
+}
+
+.clouds {
+    background-image: url('../img/weather/clouds.jpg');
+}
+
+.rain {
+    background-image: url('../img/weather/rain.jpg');
+}
+
+.snow {
+    background-image: url('../img/weather/snow.jpg');
+}
+
+.thunderstorm {
+    background-image: url('../img/weather/thunderstorm.jpg');
+}
+
+.fog {
+    background-image: url('../img/weather/fog.jpg');
+}
+
+.drizzle {
+    background-image: url('../img/weather/drizzle.jpeg');
+}
+
+.mist {
+    background-image: url('../img/weather/mist.jpg');
+}
+
+/* Optional: Default background if condition doesn't match */
+.default-background {
+    background-image: url('/img/weather/default-background.jpg');
+}

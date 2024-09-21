@@ -1,0 +1,126 @@
+async function initMap() {
+    // Request needed libraries.
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const map = new Map(document.getElementById("map"), {
+      center: { lat: 37.4239163, lng: -122.0947209 },
+      zoom: 14,
+      mapId: "4504f8b37365c3d0",
+    });
+    const marker = new AdvancedMarkerElement({
+      map,
+      position: { lat: 37.4239163, lng: -122.0947209 },
+    });
+  }
+  
+  initMap();
+
+  const input = document.getElementById("search-bar"); const autocomplete = new google.maps.places.Autocomplete(input);
+
+  autocomplete.addListener("place_changed", () => { const place = autocomplete.getPlace(); // ... handle the selected place (e.g., add a marker) 
+    });
+
+    const marker = new google.maps.Marker({ map: map, position: place.geometry.location, });
+
+
+
+    <!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Simple Marker</title>
+    <!-- The callback parameter is required, so we use console.debug as a noop -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1dIgQ_LUPYhytMGKeEnqPxl2kIDWZ4xc&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+    <link rel="stylesheet" href="css/mapsPage.css" />
+  </head>
+
+  <body>
+    <input type="text" id="search-bar" placeholder="Enter a location">
+
+    <gmp-map center="28.53,77.26" zoom="4" map-id="DEMO_MAP_ID">
+      <gmp-advanced-marker position="40.12150192260742,-100.45039367675781" title="My location"></gmp-advanced-marker>
+    </gmp-map>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer ></script>
+
+  </body>
+
+</html>
+
+
+
+
+
+///////////////////////////////////////////////
+const url = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=eba268ad2b5604ed8636f5e57ce3cebf';
+const options = {
+	method: 'GET'
+};
+
+async function fetchData(){
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+fetchData();
+
+
+
+///////////////////////////////////
+// Function to initialize Google Maps Places API Autocomplete
+function initAutocomplete() {
+    const input = document.getElementById('search-input');
+    const autocomplete = new google.maps.places.Autocomplete(input);
+
+    // When a place is selected
+    autocomplete.addListener('place_changed', async function () {
+        const place = autocomplete.getPlace();
+        if (place.geometry) {
+            const lat = place.geometry.location.lat();
+            const lng = place.geometry.location.lng();
+            await getWeatherData(lat, lng);  // Await weather data retrieval
+        }
+    });
+}
+
+// Async function to fetch weather data from OpenWeather API
+async function getWeatherData(lat, lng) {
+    const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${openWeatherApiKey}&units=metric`;
+
+    try {
+        const response = await fetch(weatherApiUrl);
+        const data = await response.json();
+
+        if (response.ok) {
+            // Process and display weather data
+            const weatherInfo = `Weather in ${data.name}: ${data.weather[0].description}, Temperature: ${data.main.temp}°C`;
+            alert(weatherInfo);
+        } else {
+            alert('Weather data not found.');
+        }
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+// Attach event listener to search button
+document.getElementById('search-btn').addEventListener('click', function () {
+    const input = document.getElementById('search-input');
+    if (input.value === '') {
+        alert('Please enter a location.');
+    } else {
+        google.maps.event.trigger(input, 'focus', {});
+        google.maps.event.trigger(input, 'keydown', { keyCode: 13 });
+    }
+});
+
+
+
+////
+air quality api: url: http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}

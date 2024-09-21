@@ -1,0 +1,31 @@
+<!-- weather.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Details</title>
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Details for <span id="place-name">Loading...</span></h1>
+        <div class="weather-details">
+            <div class="detail">Temperature: <span id="temp">--</span> °C</div>
+            <div class="detail">Feels Like: <span id="feels-like">--</span> °C</div>
+            <div class="detail">Sunrise: <span id="sunrise">--</span> am</div>
+            <div class="detail">Sunset: <span id="sunset">--</span> pm</div>
+            <div class="detail">Pressure: <span id="pressure">--</span> hPa</div>
+            <div class="detail">Humidity: <span id="humidity">--</span>%</div>
+            <div class="detail">Clouds: <span id="clouds">--</span>%</div>
+            <div class="detail">Wind Speed: <span id="wind-speed">--</span> m/s</div>
+        </div>
+
+        <div class="back-button">
+            <button onclick="window.location.href='index.html';">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="js/weather.js"></script>
+</body>
+</html>

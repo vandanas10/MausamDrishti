@@ -1,0 +1,75 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body { background-image:url('/img/weatherBg.avif');
+    background-attachment:fixed;             
+    background-repeat: no-repeat; 
+    background-size: cover; 
+} 
+
+.nav-bar{
+    /* background-color: #8EACCD; */
+    color: #000000;
+    height: 6vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 65vw;
+    flex-wrap: wrap;
+}
+
+.nav-icon a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.nav-items ul li {
+    list-style: none;
+    text-align: end;
+    display: inline-block;
+}
+
+li a{
+    padding: 0 6vh 0 1vh;
+    text-decoration:none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30vh;
+}
+.search-bar label {
+    font-weight:bold;
+    font-size: 2.5rem;
+}
+.search-bar-btn {
+    padding: 2vh;
+}
+
+.btn-search  {
+    background-color: rgb(203, 250, 234);
+    border-radius: 7px;
+}
+
+.input-search {
+    border-radius: 8px;
+    border: 2px solid gray;
+}
+.search-font {
+    font-size: 1.2rem;
+}
